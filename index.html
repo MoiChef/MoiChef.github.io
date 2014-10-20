@@ -142,7 +142,7 @@ mixpanel.init("f40c9915b7443f7579fc0d528dfa4902");</script><!-- end Mixpanel -->
 		var uuid = guid();
 
 		$.cookie("distinct_id", uuid);
-		mixpanel.track("View Landing Page", {distinct_id: $.cookie("distinct_id")});
+		mixpanel.track("View Landing Page", {distinct_id: uuid});
 	}
 
     $('#email').keydown(function (e){
