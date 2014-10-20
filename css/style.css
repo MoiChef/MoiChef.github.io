@@ -702,8 +702,12 @@ strong {
     position: relative;
     text-align: center;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
-    margin-top: 100px;
+    margin-top: 30px;
     z-index: 3;
+}
+
+.jumbotron {
+    background-color: rgba(0,0,0,0.7);
 }
 
 .main .content{
@@ -715,7 +719,7 @@ strong {
 }
 .main .motto, .main .subscribe .info-text{
     font-family: 'Pathway Gothic One', sans-serif;
-    font-size: 28px;
+    font-size: 36px;
     color: #FFFFFF;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.33);
     text-align: center;
@@ -723,33 +727,8 @@ strong {
 
 }
 .main .subscribe .info-text{
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 30px;
-}
-#video_background {
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 1;
-    overflow: hidden;
-    background-image: url('../images/video_bg.png');
-    background-position: center center;
-    background-size: cover;
-
-}
-#video_pattern {
-    position: fixed;
-    opacity: 0.6;
-    background-color: rgba(0,0,0,.45);
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
 }
 
 .feature h2 {
@@ -769,7 +748,7 @@ strong {
     margin-top: 50px;
 }
 .footer .heart{
-    color: #FF3B30;
+    color: #E30613;
 }
 .footer a{
     color: #009EE0;
@@ -901,9 +880,6 @@ strong {
     }
     .main .container{
         margin-bottom: 50px;
-    }
-    #video_background{
-        display: none;
     }
 
 }
