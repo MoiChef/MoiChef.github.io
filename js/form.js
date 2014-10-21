@@ -31,7 +31,8 @@ function doSubmit() {
         });
 
 
-        window.location = "./thankyou.html";
+        window.location.href="./thankyou.html";
+        return false;
     }
 
 
