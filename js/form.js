@@ -1,39 +1,43 @@
 
 function doSubmit() {
 
-    var email = $("#email").val();
+    if ($("#email")[0].validity.valid == false) {
+        $("#email-error").show();
+    } else {
 
-    $.ajax({
-        url:"https://docs.google.com/forms/d/1ehKjRrixCVh5oYXpECAGppMArw-ZQLIEV9gq6-5y0QE/formResponse",
-        data: {
-            'entry.474034136': email
-        },
-        type: "POST",
-        dataType: "xml",
-        statusCode: {
-            0: function (){
+        var email = $("#email").val();
 
-                success();
+        $.ajax({
+            url:"https://docs.google.com/forms/d/1ehKjRrixCVh5oYXpECAGppMArw-ZQLIEV9gq6-5y0QE/formResponse",
+            data: {
+                'entry.474034136': email
             },
-            200: function (){
+            type: "POST",
+            dataType: "xml",
+            statusCode: {
+                0: function (){
 
-                success();
+                    success();
+                },
+                200: function (){
+
+                    success();
+                }
             }
-        }
-    });
-
-    function success() {
-        var uuid = $.cookie("distinct_id");
-        mixpanel.identify(uuid);
-
-        mixpanel.people.set({
-            "$email": email
         });
 
+        function success() {
+            var uuid = $.cookie("distinct_id");
+            mixpanel.identify(uuid);
 
-        window.location.href="./thankyou.html";
-        return false;
+            mixpanel.people.set({
+                "$email": email
+            });
+
+
+            window.location.href="./thankyou.html";
+            return false;
+        }
     }
-
 
 }
