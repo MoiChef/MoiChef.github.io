@@ -13,16 +13,26 @@ function doSubmit() {
         statusCode: {
             0: function (){
 
-                window.location = "./thankyou.html";
-                //Success message
+                success();
             },
             200: function (){
 
-                window.location = "./thankyou.html";
-                //Success message
+                success();
             }
         }
     });
+
+    function success() {
+        var uuid = $.cookie("distinct_id");
+        mixpanel.identify(uuid);
+
+        mixpanel.people.set({
+            "$email": email
+        });
+
+
+        window.location = "./thankyou.html";
+    }
 
 
 }
