@@ -715,7 +715,7 @@ strong {
     z-index: 4;
 }
 .main .motto{
-    //min-height: 140px;
+    /* min-height: 140px;*/
 }
 .main .motto, .main .subscribe .info-text{
     font-family: 'Pathway Gothic One', sans-serif;
@@ -776,6 +776,7 @@ strong {
         width: 190px;
     }
     .footer{
+           /* min-height: 140px;*/
         //position: fixed;
         bottom: 20px;
     }
