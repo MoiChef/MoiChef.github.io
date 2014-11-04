@@ -71,9 +71,7 @@ h5, .h5 {
     font-size: 16px;
 }
 h6, .h6{
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: 12px;
 }
 p{
     font-size: 16px;
@@ -923,3 +921,9 @@ strong {
 .icon-Order:before {
 	content: "\e602";
 }
+
+h6.info-text {
+   font-size: 10px;
+   text-color: yellow;
+}
+
