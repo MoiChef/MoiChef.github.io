@@ -775,7 +775,7 @@ strong {
     }
     .footer{
            /* min-height: 140px;*/
-        //position: fixed;
+        /* position: fixed; */
         bottom: 20px;
     }
 }
